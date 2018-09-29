@@ -1,26 +1,26 @@
 <template>
   <div id="app">
-    <v-app dark>
+    <v-app light>
+        <v-toolbar app dark fixed clipped-left class="primary"></v-toolbar>
       <v-content>
         <v-container fluid fill-height>
-          <v-slide-y-transition mode="out-in">
-            <inspire-view></inspire-view>
-          </v-slide-y-transition>
+        <router-view></router-view>
         </v-container>
       </v-content>
-      <v-footer :fixed="fixed" app>
-        <v-spacer></v-spacer>
-        <span> by Joel Bispo Neto &copy; 2018</span>
-      </v-footer>
+        <v-footer app fixed dark class="cyan pa-3">
+            <div>&copy; GAP - Game of Austrustic Punishment {{ new Date().getFullYear() }}</div>
+            <v-spacer></v-spacer>
+            <div> <span>by Joel Bispo Neto</span></div>
+        </v-footer>
     </v-app>
   </div>
 </template>
 
 <script>
-  import InspireView from '../renderer/components/InspireView'
+  import WelcomeView from '../renderer/components/WelcomeView'
   export default {
     name: 'gap',
-    components: { InspireView },
+    components: { WelcomeView },
     data: () => ({
       title: 'Vuetify.js'
     })

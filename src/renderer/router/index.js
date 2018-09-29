@@ -16,6 +16,11 @@ export default new Router({
       component: require('@/components/InspireView').default
     },
     {
+      path: '/loginResearcher',
+      name: 'login-researcher',
+      component: require('@/components/LoginView/LoginResearcher').default
+    },
+    {
       path: '*',
       redirect: '/'
     }
