@@ -21,6 +21,11 @@
             ></v-text-field>
             <v-card-actions>
               <v-spacer></v-spacer>
+              <v-btn flat ref="submitBtn" color="primary" large @click="clickedOnRegisterResearcher"> Primeiro acesso
+                <span slot="loader" class="custom-loader">
+                    <v-icon light>cached</v-icon>
+                  </span>
+              </v-btn>
               <v-btn ref="submitBtn" color="primary" large> Entrar
                 <span slot="loader" class="custom-loader">
                     <v-icon light>cached</v-icon>
@@ -36,6 +41,11 @@
 
 <script>
 export default {
-  name: 'Login-researcher'
+  name: 'Login-researcher',
+  methods: {
+    clickedOnRegisterResearcher () {
+      this.$router.push('/firstAccessResearcher')
+    }
+  }
 }
 </script>

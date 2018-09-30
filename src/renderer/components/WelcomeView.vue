@@ -40,7 +40,6 @@
     },
     methods: {
       clickedOnResearcher () {
-        console.log('clicou')
         this.$router.push('/loginResearcher')
       }
     }
