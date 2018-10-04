@@ -67,19 +67,18 @@
     methods: {
       clickedOnRegisterResearcher () {
         console.log(this.researcher)
-        fb.auth.createUserWithEmailAndPassword('joelbison21asas2@gmail.com', '123456').then(user => { // this.researcher.email, this.researcher.password
+        fb.auth.createUserWithEmailAndPassword(this.researcher.email, this.researcher.email).then(user => {
           this.$store.commit('setCurrentUser', user.user)
           console.log('comitou current user')
           console.log('usuario', user.user)
           // create user obj
           fb.researcherColletion.doc(user.user.uid).set({
-            fullName: 'joel bisap', // this.researcher.fullName,
-            institution: 'instituicao teste', // this.researcher.fullName
-            academicLevel: 'academic teste', // this.researcher.academicLevel,
-            email: 'joelbison21asas2@gmail.com',
-            userName: 'joelbispo'
+            fullName: this.researcher.fullName,
+            institution: this.researcher.fullName,
+            academicLevel: this.researcher.academicLevel,
+            userName: this.researcher.userName
           }).then(() => {
-            this.$store.dispatch('fetchUserProfile')
+            this.$store.dispatch('fetchResearcher')
             console.log('feched user')
           }).catch(err => {
             console.log(err)

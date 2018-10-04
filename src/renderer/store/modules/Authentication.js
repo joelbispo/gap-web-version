@@ -3,13 +3,14 @@ const fb = require('../../firebase-helpers/firebaseConfig')
 export default {
   state: {
     currentUser: null,
-    userProfile: {}
+    researcher: {}
   },
   actions: {
-    fetchUserProfile ({commit, state}) {
+    fetchResearcher ({commit, state}) {
       console.log('state', state)
       fb.researcherColletion.doc(state.currentUser.uid).get().then(res => {
-        commit('setUserProfile', res.data())
+        console.log('res.data', res)
+        commit('setResearcher', res.data())
       }).catch(err => {
         console.log(err)
       })
@@ -19,8 +20,12 @@ export default {
     setCurrentUser (state, val) {
       state.currentUser = val
     },
-    setUserProfile (state, val) {
-      state.userProfile = val
+    setResearcher (state, val) {
+      state.researcher = val
     }
+  },
+  getters: {
+    currentUser: state => state.currentUser,
+    currentResearcher: state => state.researcher
   }
 }

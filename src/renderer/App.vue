@@ -10,7 +10,7 @@
         <v-footer app fixed dark class="cyan pa-3">
             <div>&copy; GAP - Game of Austruistic Punishment {{ new Date().getFullYear() }}</div>
             <v-spacer></v-spacer>
-            <div> <span>by Joel Bispo Neto</span></div>
+            <div v-if="currentResearcher"> <span>{{currentResearcher.fullName}}</span></div>
         </v-footer>
     </v-app>
   </div>
@@ -18,12 +18,17 @@
 
 <script>
   import WelcomeView from '../renderer/components/WelcomeView'
+  import {mapGetters} from 'vuex'
+
   export default {
     name: 'gap',
     components: { WelcomeView },
     data: () => ({
       title: 'Vuetify.js'
-    })
+    }),
+    computed: {
+      ...mapGetters(['currentUser', 'currentResearcher'])
+    }
   }
 </script>
 

@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4d1020c6-0f88-413b-a105-7f3169b8fb34" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -20,25 +20,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/router/index.js">
+      <file leaf-file-name="LoginResearcher.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+            <state relative-caret-position="253">
+              <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="firebaseConfig.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js">
+      <file leaf-file-name="WelcomeView.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="25" />
+            <state relative-caret-position="184">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#1;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="29" column="54" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="54" />
+              <folding>
+                <element signature="e#327#333#0" expanded="true" />
+                <element signature="e#564#624#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FirstAccessResearcher.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="71" selection-start-line="71" selection-end-line="72" selection-end-column="43" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#v-flex#0;n#v-content#0;n#v-card#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,17 +73,8 @@
       <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/node_modules/vuex/types/index.d.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
+            <state relative-caret-position="897">
               <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/firebase/index.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="861" column="4" selection-start-line="861" selection-start-column="4" selection-end-line="861" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -65,17 +82,11 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/store/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authentication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/Authentication.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+            <state>
+              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +94,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="438">
               <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -92,25 +103,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FirstAccessResearcher.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+            <state relative-caret-position="138">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".eslintrc.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.eslintrc.js">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="Authentication.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/Authentication.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <file leaf-file-name="firebaseConfig.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="86">
-              <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
+            <state relative-caret-position="598">
+              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,6 +151,9 @@
       <find>loginResearcher</find>
       <find>&quot;</find>
       <find>mode</find>
+      <find>usuario</find>
+      <find>setResearcher</find>
+      <find>researcher</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -150,16 +171,16 @@
         <option value="$PROJECT_DIR$/.electron-vue/webpack.renderer.config.js" />
         <option value="$PROJECT_DIR$/src/renderer/components/LoginView/Login.vue" />
         <option value="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAcessResearcher.vue" />
-        <option value="$PROJECT_DIR$/src/renderer/components/WelcomeView.vue" />
-        <option value="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" />
         <option value="$PROJECT_DIR$/src/index.ejs" />
-        <option value="$PROJECT_DIR$/src/renderer/App.vue" />
         <option value="$PROJECT_DIR$/src/renderer/main.js" />
         <option value="$PROJECT_DIR$/src/renderer/router/index.js" />
         <option value="$PROJECT_DIR$/src/renderer/store/index.js" />
-        <option value="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" />
-        <option value="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" />
         <option value="$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js" />
+        <option value="$PROJECT_DIR$/src/renderer/components/WelcomeView.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/App.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" />
+        <option value="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" />
+        <option value="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" />
       </list>
     </option>
   </component>
@@ -184,9 +205,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="x" value="-1" />
+    <option name="width" value="1922" />
+    <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -236,7 +257,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/gmcore/Documentos/gap/src/renderer/store/modules/Authentication.js&#10;fetchuser&#9;null&#9;null&#10;fireba&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/firebase-helpers/firebaseConfig.js&#10;re&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/FirstAccessResearcher.vue&#10;router&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/router&#10;main.js&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/main.js&#10;index.h&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/node_modules/devtron/static/index.html&#10;app&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/App.vue&#10;login&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/LoginResearcher.vue&#10;vuerou&#9;null&#9;null&#10;rese&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/LoginResearcher.vue&#10;main&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/main.js&#10;module&#9;null&#9;null&#10;stylus&#9;null&#9;null&#10;font&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/node_modules/cfonts/bin/font.js&#10;route&#9;null&#9;null&#10;routerv&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="firebase&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/firebase-helpers/firebaseConfig.js&#10;first&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/FirstAccessResearcher.vue&#10;aut&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/store/modules/Authentication.js&#10;app&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/App.vue&#10;login&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/LoginResearcher.vue&#10;auth&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/store/modules/Authentication.js&#10;welcome&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/WelcomeView.vue&#10;fetchuser&#9;null&#9;null&#10;fireba&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/firebase-helpers/firebaseConfig.js&#10;re&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/FirstAccessResearcher.vue&#10;router&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/router&#10;main.js&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/main.js&#10;index.h&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/node_modules/devtron/static/index.html&#10;vuerou&#9;null&#9;null&#10;rese&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/components/LoginView/LoginResearcher.vue&#10;main&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/src/renderer/main.js&#10;module&#9;null&#9;null&#10;stylus&#9;null&#9;null&#10;font&#9;FILE&#9;file:///home/joelbisponeto/projetos/gap/node_modules/cfonts/bin/font.js&#10;route&#9;null&#9;null&#10;routerv&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -298,24 +319,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44635000" />
+    <option name="totallyTimeSpent" value="49272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-1" width="1366" height="768" extended-state="7" />
+    <frame x="-1" y="0" width="1922" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TypeScript" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24743778" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118229166" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.21083455" side_tool="true" weight="0.89285713" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.78916544" visible="true" weight="0.0922619" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015625" side_tool="true" weight="0.32421052" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4984375" visible="true" weight="0.32421052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49853587" weight="0.32972136" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" weight="0.32947367" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -324,13 +345,12 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="TypeScript" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32421052" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32421052" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
@@ -342,13 +362,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -369,13 +382,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firebase/externs/firebase-auth-externs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-104">
-          <caret line="1139" selection-start-line="1139" selection-end-line="1139" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/firebase/externs/firebase-auth-externs.js" />
     <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-161" />
@@ -388,11 +395,7 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
       <provider selected="true" editor-type-id="text-editor">
@@ -423,13 +426,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView/Login.vue" />
     <entry file="file://$PROJECT_DIR$/src/renderer/components/InspireView.vue">
@@ -481,22 +478,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/index.dev.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -572,17 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="42" column="43" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#1;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
@@ -590,62 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#327#333#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="97" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/Counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/firebase/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="861" column="4" selection-start-line="861" selection-start-column="4" selection-end-line="861" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/store/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/firebase/index.d.ts" />
     <entry file="file://$PROJECT_DIR$/src/renderer/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
@@ -658,22 +580,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/vuex/types/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="897">
           <caret line="39" column="2" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/Authentication.js">
+    <entry file="file://$PROJECT_DIR$/.nvmrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state relative-caret-position="138">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/store/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#1;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="29" column="54" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="54" />
+          <folding>
+            <element signature="e#327#333#0" expanded="true" />
+            <element signature="e#564#624#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="25" />
+        <state relative-caret-position="598">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -682,8 +649,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="74" column="23" lean-forward="true" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="161">
+          <caret line="71" selection-start-line="71" selection-end-line="72" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#v-flex#0;n#v-content#0;n#v-card#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/store/modules/Authentication.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
