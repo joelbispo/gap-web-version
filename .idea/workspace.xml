@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4d1020c6-0f88-413b-a105-7f3169b8fb34" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.nvmrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/renderer/store/modules/Authentication.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="LoginResearcher.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+            <state relative-caret-position="161">
+              <caret line="7" column="97" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -35,8 +32,8 @@
       <file leaf-file-name="WelcomeView.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="713">
+              <caret line="31" selection-start-line="31" selection-end-line="31" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#1;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
@@ -48,11 +45,10 @@
       <file leaf-file-name="App.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
+            <state relative-caret-position="644">
               <caret line="29" column="54" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="54" />
               <folding>
                 <element signature="e#327#333#0" expanded="true" />
-                <element signature="e#564#624#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -61,7 +57,7 @@
       <file leaf-file-name="FirstAccessResearcher.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
+            <state relative-caret-position="1633">
               <caret line="71" selection-start-line="71" selection-end-line="72" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#v-flex#0;n#v-content#0;n#v-card#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
@@ -94,7 +90,7 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
+            <state relative-caret-position="437">
               <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -124,7 +120,7 @@
       <file leaf-file-name="firebaseConfig.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
+            <state relative-caret-position="575">
               <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -204,10 +200,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1" />
-    <option name="width" value="1922" />
-    <option name="height" value="1054" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="width" value="1914" />
+    <option name="height" value="1051" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -215,6 +210,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,7 +248,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,44 +310,34 @@
       <workItem from="1538217339503" duration="2124000" />
       <workItem from="1538313030746" duration="8454000" />
       <workItem from="1538332353155" duration="10234000" />
+      <workItem from="1538695492786" duration="580000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49272000" />
+    <option name="totallyTimeSpent" value="49852000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1922" height="1054" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118229166" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5015625" side_tool="true" weight="0.32421052" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32421052" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4984375" visible="true" weight="0.32421052" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" weight="0.32421052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49947917" weight="0.32947367" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.118229166" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49947917" visible="true" weight="0.32421052" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32421052" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +592,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
+        <state relative-caret-position="437">
           <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="26" selection-end-column="2" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -617,8 +602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/WelcomeView.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="713">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-flex#0;n#v-card#0;n#v-flex#1;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
@@ -628,18 +613,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
+        <state relative-caret-position="644">
           <caret line="29" column="54" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="54" />
           <folding>
             <element signature="e#327#333#0" expanded="true" />
-            <element signature="e#564#624#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/firebase-helpers/firebaseConfig.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
+        <state relative-caret-position="575">
           <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -649,7 +633,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/FirstAccessResearcher.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
+        <state relative-caret-position="1633">
           <caret line="71" selection-start-line="71" selection-end-line="72" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#img#0;n#v-flex#0;n#v-content#0;n#v-card#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
@@ -666,8 +650,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/renderer/components/LoginView/LoginResearcher.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="58" column="42" lean-forward="true" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+        <state relative-caret-position="161">
+          <caret line="7" column="97" lean-forward="true" selection-start-line="7" selection-start-column="97" selection-end-line="7" selection-end-column="97" />
           <folding>
             <element signature="n#style#0;n#img#0;n#v-card-media#0;n#v-card#0;n#v-flex#0;n#v-layout#0;n#template#0;n#!!top" expanded="true" />
           </folding>
