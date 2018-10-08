@@ -37,10 +37,9 @@
             <v-spacer></v-spacer>
             <v-btn
                     icon
-                    @click.native.stop="rightDrawer = !rightDrawer"
             >
                 <v-icon>person</v-icon>
-            </v-btn>
+                Sair</v-btn>
         </v-toolbar>
       <v-content>
         <v-container fluid fill-height>
@@ -55,18 +54,12 @@
                 app
         >
             <v-list>
-                <v-btn
-                        icon
-                        @click="logout"
-                >
-                    <v-icon>power_off</v-icon>
-                </v-btn>
-                <!--<v-list-tile @click="logout">-->
-                    <!--<v-list-tile-action>-->
-                        <!--<v-icon light>compare_arrows</v-icon>-->
-                    <!--</v-list-tile-action>-->
-                    <!--<v-list-tile-title>Sair</v-list-tile-title>-->
-                <!--</v-list-tile>-->
+                <v-list-tile @click="logout">
+                    <v-list-tile-action>
+                        <v-icon light>compare_arrows</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-title>Sair</v-list-tile-title>
+                </v-list-tile>
             </v-list>
         </v-navigation-drawer>
         <v-footer app fixed dark class="cyan pa-3">
@@ -80,38 +73,31 @@
 
 <script>
   import WelcomeView from '../renderer/components/WelcomeView'
-  import {mapGetters} from 'vuex'
-  const fb = require('../renderer/firebase-helpers/firebaseConfig')
+  import {mapGetters, mapActions} from 'vuex'
 
   export default {
     name: 'gap',
     components: { WelcomeView },
-    data: () => ({
-      title: 'GAP',
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [
-        { icon: 'apps', title: 'Welcome', to: '/' },
-        { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false
-    }),
+    data: function () {
+      return {
+        title: 'GAP',
+        clipped: false,
+        drawer: true,
+        fixed: false,
+        items: [
+          {icon: 'apps', title: 'Welcome', to: '/'},
+          {icon: 'bubble_chart', title: 'Inspire', to: '/inspire'}
+        ],
+        miniVariant: false,
+        right: true,
+        rightDrawer: false
+      }
+    },
     computed: {
       ...mapGetters(['currentUser', 'currentResearcher'])
     },
-    method: {
-      logout () {
-        console.log('pressionou logout')
-        fb.auth.signOut().then(() => {
-          this.$store.dispatch('clearData')
-          this.$router.push('/')
-        }).catch(err => {
-          console.log(err)
-        })
-      }
+    methods: {
+      ...mapActions(['logout'])
     }
   }
 </script>

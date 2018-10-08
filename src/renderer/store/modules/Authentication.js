@@ -15,9 +15,15 @@ export default {
         console.log(err)
       })
     },
-    clearData ({ commit }) {
-      commit('setCurrentUser', null)
-      commit('setResearcher', {})
+    logout ({ commit }) {
+      console.log('pressionou logout')
+      fb.auth.signOut().then(() => {
+        commit('setCurrentUser', null)
+        commit('setResearcher', {})
+        this.$router.push('/')
+      }).catch(err => {
+        console.log(err)
+      })
     }
   },
   mutations: {
