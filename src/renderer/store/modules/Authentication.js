@@ -14,6 +14,10 @@ export default {
       }).catch(err => {
         console.log(err)
       })
+    },
+    clearData ({ commit }) {
+      commit('setCurrentUser', null)
+      commit('setResearcher', {})
     }
   },
   mutations: {

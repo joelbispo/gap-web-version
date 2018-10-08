@@ -39,7 +39,7 @@
                     icon
                     @click.native.stop="rightDrawer = !rightDrawer"
             >
-                <v-icon>menu</v-icon>
+                <v-icon>person</v-icon>
             </v-btn>
         </v-toolbar>
       <v-content>
@@ -55,12 +55,18 @@
                 app
         >
             <v-list>
-                <v-list-tile @click.native="right = !right">
-                    <v-list-tile-action>
-                        <v-icon light>compare_arrows</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-                </v-list-tile>
+                <v-btn
+                        icon
+                        @click="logout"
+                >
+                    <v-icon>power_off</v-icon>
+                </v-btn>
+                <!--<v-list-tile @click="logout">-->
+                    <!--<v-list-tile-action>-->
+                        <!--<v-icon light>compare_arrows</v-icon>-->
+                    <!--</v-list-tile-action>-->
+                    <!--<v-list-tile-title>Sair</v-list-tile-title>-->
+                <!--</v-list-tile>-->
             </v-list>
         </v-navigation-drawer>
         <v-footer app fixed dark class="cyan pa-3">
@@ -75,6 +81,7 @@
 <script>
   import WelcomeView from '../renderer/components/WelcomeView'
   import {mapGetters} from 'vuex'
+  const fb = require('../renderer/firebase-helpers/firebaseConfig')
 
   export default {
     name: 'gap',
@@ -94,6 +101,17 @@
     }),
     computed: {
       ...mapGetters(['currentUser', 'currentResearcher'])
+    },
+    method: {
+      logout () {
+        console.log('pressionou logout')
+        fb.auth.signOut().then(() => {
+          this.$store.dispatch('clearData')
+          this.$router.push('/')
+        }).catch(err => {
+          console.log(err)
+        })
+      }
     }
   }
 </script>
