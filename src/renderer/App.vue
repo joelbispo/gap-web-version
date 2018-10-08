@@ -35,11 +35,7 @@
             </v-btn>
             <v-toolbar-title v-text="title"></v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-btn
-                    icon
-            >
-                <v-icon>person</v-icon>
-                Sair</v-btn>
+            <v-btn icon @click.native.stop="rightDrawer = !rightDrawer"><v-icon>person</v-icon></v-btn>
         </v-toolbar>
       <v-content>
         <v-container fluid fill-height>

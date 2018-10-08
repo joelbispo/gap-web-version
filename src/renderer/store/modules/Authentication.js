@@ -1,3 +1,4 @@
+import router from '../../router/index'
 const fb = require('../../firebase-helpers/firebaseConfig')
 
 export default {
@@ -20,7 +21,7 @@ export default {
       fb.auth.signOut().then(() => {
         commit('setCurrentUser', null)
         commit('setResearcher', {})
-        this.$router.push('/')
+        router.push('/')
       }).catch(err => {
         console.log(err)
       })
