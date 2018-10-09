@@ -14,24 +14,21 @@
                     <v-container fluid grid-list-xl py-2>
                         <v-flex>
                             <v-text-field
-                                    label="Nome completo" v-model.trim="researcher.fullName"
-                                    :error-messages="fullNameErrors" required
+                                    label="Nome completo" v-model.trim="fullName"
+                                    :error-messages="fullNameErrors" required  @blur="$v.fullName.$touch()"
                                    ></v-text-field>
                         </v-flex>
                         <v-flex>
-                            <v-text-field label="Instituição (Ex. Universidade, Instituto Federal)" v-model.trim="researcher.institution"></v-text-field>
+                            <v-text-field label="Instituição (Ex. Universidade, Instituto Federal)" :error-messages="institutionErrors"  required v-model.trim="institution" @blur="$v.institution.$touch()"></v-text-field>
                         </v-flex>
                         <v-flex>
-                            <v-text-field label="Nível acadêmico" v-model.trim="researcher.academicLevel"></v-text-field>
+                            <v-text-field label="Nível acadêmico" :error-messages="academicLevelErrors" @blur="$v.academicLevel.$touch()" required v-model.trim="academicLevel"></v-text-field>
                         </v-flex>
                         <v-flex>
-                            <v-text-field label="email" v-model.trim="researcher.email"></v-text-field>
+                            <v-text-field label="email" v-model.trim="email" :error-messages="emailErrors" required @blur="$v.email.$touch()"  ></v-text-field>
                         </v-flex>
                         <v-flex>
-                            <v-text-field label="Senha" v-model.trim="researcher.password"></v-text-field>
-                        </v-flex>
-                        <v-flex>
-                            <v-text-field label="Confirmação de Senha"></v-text-field>
+                            <v-text-field label="Senha" v-model.trim="password" :error-messages="passwordErrors" @blur="$v.password.$touch()"  type="password"></v-text-field>
                         </v-flex>
                     </v-container>
                 </v-card-text>
@@ -48,7 +45,7 @@
 </template>
 
 <script>
-  import { required, maxLength, email, password } from 'vuelidate/lib/validators'
+  import { required, maxLength, email, minLength } from 'vuelidate/lib/validators'
   import { validationMixin } from 'vuelidate'
   const fb = require('../../firebase-helpers/firebaseConfig')
 
@@ -60,31 +57,29 @@
       institution: { required, maxLength: maxLength(100) },
       academicLevel: { required, maxLength: maxLength(100) },
       email: { required, email },
-      password: { required, password }
+      password: { required, minLength: minLength(6) }
     },
     data: function () {
       return {
-        researcher: {
-          fullName: '',
-          institution: '',
-          academicLevel: '',
-          email: '',
-          password: ''
-        }
+        fullName: '',
+        institution: '',
+        academicLevel: '',
+        email: '',
+        password: ''
       }
     },
     methods: {
       clickedOnRegisterResearcher () {
-        console.log(this.researcher)
-        fb.auth.createUserWithEmailAndPassword(this.researcher.email, this.researcher.email).then(user => {
+        if (!this.$v.$touch()) return
+        fb.auth.createUserWithEmailAndPassword(this.email, this.password).then(user => {
           this.$store.commit('setCurrentUser', user.user)
           console.log('comitou current user')
           console.log('usuario', user.user)
           // create user obj
           fb.researcherColletion.doc(user.user.uid).set({
-            fullName: this.researcher.fullName,
-            institution: this.researcher.fullName,
-            academicLevel: this.researcher.academicLevel
+            fullName: this.fullName,
+            institution: this.fullName,
+            academicLevel: this.academicLevel
           }).then(() => {
             this.$store.dispatch('fetchResearcher')
             console.log('feched user')
@@ -104,37 +99,37 @@
     computed: {
       fullNameErrors () {
         const errors = []
-        if (!this.$v.researcher.fullName.$dirty) return errors
-        !this.$v.researcher.fullName.maxLength && errors.push('Ops, seu nome não poderá passar de 100 caracteres')
-        !this.$v.researcher.fullName.required && errors.push('Precisamos do seu nome completo')
+        if (!this.$v.fullName.$dirty) return errors
+        !this.$v.fullName.maxLength && errors.push('Ops, seu nome não poderá passar de 100 caracteres')
+        !this.$v.fullName.required && errors.push('Precisamos do seu nome completo')
         return errors
       },
       institutionErrors () {
         const errors = []
-        if (!this.$v.researcher.institution.$dirty) return errors
-        !this.$v.researcher.institution.maxLength && errors.push('Ops, sua instituição não poderá passar de 100 caracteres')
-        !this.$v.researcher.institution.required && errors.push('Precisamos saber de que instituição você faz parte')
+        if (!this.$v.institution.$dirty) return errors
+        !this.$v.institution.maxLength && errors.push('Ops, sua instituição não poderá passar de 100 caracteres')
+        !this.$v.institution.required && errors.push('Precisamos saber de que instituição você faz parte')
         return errors
       },
       academicLevelErrors () {
         const errors = []
-        if (!this.$v.researcher.academicLevel.$dirty) return errors
-        !this.$v.researcher.academicLevel.maxLength && errors.push('Ops, seu nível acadêmico não poderá passar de 100 caracteres')
-        !this.$v.researcher.academicLevel.required && errors.push('Precisamos do seu nível acadêmico')
+        if (!this.$v.academicLevel.$dirty) return errors
+        !this.$v.academicLevel.maxLength && errors.push('Ops, seu nível acadêmico não poderá passar de 100 caracteres')
+        !this.$v.academicLevel.required && errors.push('Precisamos do seu nível acadêmico')
         return errors
       },
       emailErrors () {
         const errors = []
-        if (!this.$v.researcher.email.$dirty) return errors
-        !this.$v.researcher.email.email && errors.push('Você precisa fornecer um email válido')
-        !this.$v.researcher.email.required && errors.push('Precisamos saber o seu Email, ele será usado para você autenticar na plataforma')
+        if (!this.$v.email.$dirty) return errors
+        !this.$v.email.email && errors.push('Você precisa fornecer um email válido')
+        !this.$v.email.required && errors.push('Precisamos saber o seu Email, ele será usado para você autenticar na plataforma')
         return errors
       },
       passwordErrors () {
         const errors = []
-        if (!this.$v.researcher.password.$dirty) return errors
-        !this.$v.researcher.password.minLength && errors.push('Sua senha deve contar no minimo 6 caracteres ')
-        !this.$v.researcher.password.required && errors.push('Você precisa informar a sua senha')
+        if (!this.$v.password.$dirty) return errors
+        !this.$v.password.minLength && errors.push('Sua senha deve contar no minimo 6 caracteres ')
+        !this.$v.password.required && errors.push('Você precisa informar a sua senha')
         return errors
       }
     }
