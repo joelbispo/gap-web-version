@@ -37,8 +37,9 @@
             <v-spacer></v-spacer>
             <v-btn icon @click.native.stop="rightDrawer = !rightDrawer"><v-icon>person</v-icon></v-btn>
         </v-toolbar>
-      <v-content>
-        <v-container fluid fill-height>
+        <v-content>
+            <app-alert v-if="alert" :tipo="alert.type" :texto="alert.msg" @dismissed="onDismissed"></app-alert>
+            <v-container fluid fill-height>
         <router-view></router-view>
         </v-container>
       </v-content>
@@ -90,10 +91,13 @@
       }
     },
     computed: {
-      ...mapGetters(['currentUser', 'currentResearcher'])
+      ...mapGetters(['currentUser', 'currentResearcher', 'alert'])
     },
     methods: {
-      ...mapActions(['logout'])
+      ...mapActions(['logout', 'clearAlert']),
+      onDismissed () {
+        this.clearAlert()
+      }
     }
   }
 </script>

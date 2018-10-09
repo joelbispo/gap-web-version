@@ -4,11 +4,14 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 
 import App from './App'
+import AlertaCustom from '../renderer/components/CommonView/Alert'
 import router from './router'
 import store from './store'
 const fb = require('./firebase-helpers/firebaseConfig')
 
 Vue.use(Vuetify)
+Vue.component('app-alert', AlertaCustom)
+
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false

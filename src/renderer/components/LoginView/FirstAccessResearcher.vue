@@ -47,6 +47,8 @@
 <script>
   import { required, maxLength, email, minLength } from 'vuelidate/lib/validators'
   import { validationMixin } from 'vuelidate'
+  import {mapActions, mapGetters} from 'vuex'
+
   const fb = require('../../firebase-helpers/firebaseConfig')
 
   export default {
@@ -69,8 +71,13 @@
       }
     },
     methods: {
+      ...mapActions(['setError', 'setSuccess']),
       clickedOnRegisterResearcher () {
-        if (!this.$v.$touch()) return
+        if (this.$v.$touch()) {
+          this.setError('Ops, você não preencheu todos os campos corretamente, por favor verifique se está tudo certinho e tente novamente')
+          return
+        }
+        console.log('chegou no metodo de login')
         fb.auth.createUserWithEmailAndPassword(this.email, this.password).then(user => {
           this.$store.commit('setCurrentUser', user.user)
           console.log('comitou current user')
@@ -82,13 +89,15 @@
             academicLevel: this.academicLevel
           }).then(() => {
             this.$store.dispatch('fetchResearcher')
-            console.log('feched user')
+            this.setSuccess('Pronto, deu certo o cadastro agora você já pode utilizar o GAP, seja bem vindo!')
           }).catch(err => {
             console.log(err)
             console.log('deu erro')
+            this.setError('Poxa, não conseguimos salvar seu cadastro, verifique todos os campos e tente novamente')
           })
         }).catch(err => {
           console.log(err)
+          this.setError('Poxa, não conseguimos salvar seu cadastro, verifique todos os campos e tente novamente')
           console.log('deu erro2')
         })
       },
@@ -97,6 +106,7 @@
       }
     },
     computed: {
+      ...mapGetters(['error']),
       fullNameErrors () {
         const errors = []
         if (!this.$v.fullName.$dirty) return errors

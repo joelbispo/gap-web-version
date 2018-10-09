@@ -37,6 +37,7 @@
 </template>
 
 <script>
+  import {mapActions, mapGetters} from 'vuex'
   const fb = require('../../firebase-helpers/firebaseConfig')
 
   export default {
@@ -51,6 +52,7 @@
       }
     },
     methods: {
+      ...mapActions(['setError', 'setSuccess']),
       clickedOnRegisterResearcher () {
         this.$router.push('/firstAccessResearcher')
       },
@@ -59,13 +61,18 @@
         fb.auth.signInWithEmailAndPassword(this.formLogin.email, this.formLogin.password).then(user => {
           this.$store.commit('setCurrentUser', user.user)
           this.$store.dispatch('fetchResearcher')
+          this.setSuccess('Bem vindo de volta ao GAP')
           console.log('deu certo o login')
           this.load = false
         }).catch(err => {
           this.load = false
+          this.setError('Login ou senha inválidos, por favor, verifique suas credenciais tente novamente')
           console.log(err)
         })
       }
+    },
+    computed: {
+      ...mapGetters(['error'])
     }
   }
 </script>
