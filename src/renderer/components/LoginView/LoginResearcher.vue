@@ -2,6 +2,7 @@
   <v-layout align-center justify-center class="text-xs-center">
     <v-flex xs12 sm8>
       <v-card class="elevation-12">
+        <v-progress-linear :indeterminate="load"></v-progress-linear>
           <v-card-media
                   height="300px"
           >
@@ -45,7 +46,8 @@
         formLogin: {
           email: '',
           password: ''
-        }
+        },
+        load: false
       }
     },
     methods: {
@@ -53,11 +55,14 @@
         this.$router.push('/firstAccessResearcher')
       },
       login () {
+        this.load = true
         fb.auth.signInWithEmailAndPassword(this.formLogin.email, this.formLogin.password).then(user => {
           this.$store.commit('setCurrentUser', user.user)
           this.$store.dispatch('fetchResearcher')
           console.log('deu certo o login')
+          this.load = false
         }).catch(err => {
+          this.load = false
           console.log(err)
         })
       }
