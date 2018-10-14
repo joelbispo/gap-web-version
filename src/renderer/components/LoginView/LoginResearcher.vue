@@ -62,7 +62,7 @@
           this.$store.commit('setCurrentUser', user.user)
           this.$store.dispatch('fetchResearcher')
           this.setSuccess('Bem vindo de volta ao GAP')
-          console.log('deu certo o login')
+          this.$router.push('/homeResearcher')
           this.load = false
         }).catch(err => {
           this.load = false
