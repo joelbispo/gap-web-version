@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-bind:style="bgc">
+  <div id="app">
     <v-app light>
         <v-navigation-drawer v-if="currentResearcher.fullName"
                 fixed

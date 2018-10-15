@@ -30,8 +30,8 @@
                                 >
 
                                     <v-card-text>
-                                        <v-text-field label="Nome do Experimento"></v-text-field>
-                                        <v-text-field label="Tempo de cada rodada em segundos"></v-text-field>
+                                        <v-text-field label="Nome do Experimento" v-model="name" required></v-text-field>
+                                        <v-text-field label="Tempo de cada rodada em segundos" v-model="time" required></v-text-field>
                                     </v-card-text>
                                 </v-card>
 
@@ -42,7 +42,7 @@
                                     Continuar
                                 </v-btn>
 
-                                <v-btn flat>Cancel</v-btn>
+                                <v-btn flat>Cancelar</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
@@ -51,8 +51,8 @@
                                         height="300px"
                                 >
                                     <v-card-text>
-                                        <v-text-field label="Quantidade de participantes por jogo"></v-text-field>
-                                        <v-switch label="Participantes podem usar o chat"></v-switch>
+                                        <v-text-field label="Quantidade de participantes por jogo" v-model="numberParticipants" required></v-text-field>
+                                        <v-switch label="Participantes podem usar o chat" v-model="canChat" required ></v-switch>
                                     </v-card-text>
                                 </v-card>
 
@@ -63,7 +63,7 @@
                                     Continuar
                                 </v-btn>
 
-                                <v-btn flat>Cancel</v-btn>
+                                <v-btn flat @click="e1 = 1">Voltar</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="3">
@@ -72,10 +72,10 @@
                                         height="300px"
                                 >
                                     <v-card-text>
-                                        <v-radio-group>
-                                            <v-radio label="Sem liberação de pontos"></v-radio>
-                                            <v-radio label="Liberação de pontos para punição de distribuições iguais e não punição de distribuições desiguais"></v-radio>
-                                            <v-radio label="Liberação de pontos para punições de distribuições desiguais e não punição de distribuições iguais"></v-radio>
+                                        <v-radio-group  v-model="experimentalConditions" required>
+                                            <v-radio label="Sem liberação de pontos" value=1></v-radio>
+                                            <v-radio label="Liberação de pontos para punição de distribuições iguais e não punição de distribuições desiguais" value=2></v-radio>
+                                            <v-radio label="Liberação de pontos para punições de distribuições desiguais e não punição de distribuições iguais"  value=3></v-radio>
                                         </v-radio-group>
                                     </v-card-text>
                                 </v-card>
@@ -86,7 +86,7 @@
                                 >
                                     Salvar Experimento
                                 </v-btn>
-                                <v-btn flat>Cancel</v-btn>
+                                <v-btn flat  @click="e1 = 2">Voltar</v-btn>
                             </v-stepper-content>
                         </v-stepper-items>
                     </v-stepper>
@@ -102,7 +102,12 @@
     name: 'experiment-setup',
     data: function () {
       return {
-        e1: 0
+        e1: 0,
+        name: '',
+        time: 30,
+        numberParticipants: 2,
+        canChat: true,
+        experimentalConditions: 1
       }
     }
   }
