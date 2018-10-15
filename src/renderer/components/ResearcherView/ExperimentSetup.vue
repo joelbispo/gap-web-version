@@ -82,7 +82,7 @@
 
                                 <v-btn
                                         color="primary"
-                                        @click="e1 = 1"
+                                        @click="saveExperiment"
                                 >
                                     Salvar Experimento
                                 </v-btn>
@@ -98,6 +98,9 @@
 </template>
 
 <script>
+  import {mapActions} from 'vuex'
+  const fb = require('../../firebase-helpers/firebaseConfig')
+
   export default {
     name: 'experiment-setup',
     data: function () {
@@ -108,6 +111,25 @@
         numberParticipants: 2,
         canChat: true,
         experimentalConditions: 1
+      }
+    },
+    methods: {
+      ...mapActions(['setError', 'setSuccess']),
+      saveExperiment () {
+        fb.experimentColletion.add({
+          name: this.name,
+          time: this.time,
+          numberParticipants: this.numberParticipants,
+          canChat: this.canChat,
+          experimentalConditions: this.experimentalConditions,
+          researcher: 'joelbispo'
+        }).then(
+          this.setSuccess('Experimento salvo com sucesso')
+        ).catch(err => {
+          this.setError('Desculpa, algo aconteceu e não conseguimos salvar o experimento, tente novamente')
+          console.log(err)
+        }
+        )
       }
     }
   }
