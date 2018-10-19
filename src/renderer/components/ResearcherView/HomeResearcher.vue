@@ -7,9 +7,11 @@
                     <v-card-actions>
                         <div class="text-xs-center">
                         <v-btn flat large color="primary">
-                            <v-icon>fa-flask</v-icon>
-                               Novo Experimento
+                            Experimentos
                         </v-btn>
+                            <v-btn flat large color="primary">
+                                Novo
+                            </v-btn>
                         </div>
                     </v-card-actions>
                     <v-card-text>
@@ -37,6 +39,9 @@
 </template>
 
 <script>
+  import {mapGetters, mapActions} from 'vuex'
+  const fb = require('../../firebase-helpers/firebaseConfig')
+
   export default {
     name: 'home-researcher',
     data: function () {
@@ -61,6 +66,27 @@
           }
         ]
       }
+    },
+    methods: {
+      ...mapActions(['setListExperiment']),
+      experiments () {
+        fb.experimentColletion.where('researcher', '==', 'joelbiisponeto@gmail.com').get().then(docs => {
+          this.setListExperiment(docs)
+          console.log('lista retornada', docs.docs)
+          console.log('lista de experimento', this.getLisExperiment())
+        }).catch(err =>
+          console.log('erro', err)
+        )
+      },
+      getLisExperiment () {
+        return this.listExperiment
+      }
+    },
+    computed: {
+      ...mapGetters(['currentUser', 'currentResearcher', 'alert', 'listExperiment'])
+    },
+    mounted () {
+      this.experiments()
     }
   }
 </script>
