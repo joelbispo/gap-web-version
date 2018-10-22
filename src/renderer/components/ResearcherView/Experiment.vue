@@ -14,17 +14,15 @@
                     <v-card-text>
                         <v-data-table
                                 :headers="headers"
-                                :items="experimentList"
+                                :items="sessionsList"
                                 hide-actions
                                 class="elevation-1"
                         >
                             <template slot="items" slot-scope="props">
-                                <td>{{ props.item.name }}</td>
-                                <td class="text-xs-center">{{ props.item.numberParticipants }}</td>
+                                <td>{{ props.item.date }}</td>
+                                <td class="text-xs-center">{{ props.item.participantes.length }}</td>
                                 <td class="text-xs-center">{{ props.item.time }}</td>
-                                <td class="text-xs-center">{{ props.item.experimentalConditions }}</td>
-                                <td class="text-xs-center">{{ props.item.canChat ? 'Sim' : 'Não' }}</td>
-                                <td class="text-xs-center"><v-btn color="primary" @click="startExperiment(props.item)">Iniciar</v-btn></td>
+                                <td class="text-xs-center"><v-btn color="primary" @click="startExperiment(props.item.id)">Gerenciar</v-btn></td>
                             </template>
                             <template slot="no-data">
                                 <v-alert :value="true" color="primary" flat icon="warning">
@@ -41,49 +39,38 @@
 </template>
 
 <script>
-  import {mapGetters, mapActions} from 'vuex'
+  import {mapGetters} from 'vuex'
   const fb = require('../../firebase-helpers/firebaseConfig')
 
   export default {
-    name: 'home-researcher',
+    name: 'experiment',
     data: function () {
       return {
-        experimentList: [],
+        sessionsList: [],
         headers: [
-          { text: 'Nome do Experimento', value: 'name' },
-          { text: 'Nº de Participantes', value: 'numberParticipants' },
-          { text: 'Tempo de Cada Rodada (s)', value: 'time' },
-          { text: 'Condição Experimental', value: 'experimentalConditions' },
-          { text: 'Usam chat', value: 'canChat' },
+          { text: 'Data', value: 'date' },
+          { text: 'Nº de Participantes', value: 'participants' },
           { text: 'Ação', value: 'id' }
         ]
       }
     },
     methods: {
-      ...mapActions(['setCurrentExperiment']),
-      experiments () {
-        fb.experimentColletion.where('researcher', '==', this.currentUser.email).get().then(docs => {
-          let experiments = []
+      sessions () {
+        fb.sessionsColletion.where('experiment', '==', this.currentExperiment.id).get().then(docs => {
+          let sessions = []
           docs.forEach(doc => {
-            fb.experimentColletion.doc(doc.id).get().then(result => {
-              const experiment = result.data()
-              experiment.id = doc.id
-              experiments.push(experiment)
+            fb.sessionsColletion.doc(doc.id).get().then(result => {
+              const session = result.data()
+              session.id = doc.id
+              sessions.push(session)
             })
-            this.experimentList = experiments
+            this.sessionsList = sessions
           })
-        }).catch(
-        )
-      },
-      startExperiment (experiment) {
-        this.setCurrentExperiment(experiment)
+        }).catch()
       }
     },
     computed: {
-      ...mapGetters(['currentUser', 'currentResearcher', 'alert'])
-    },
-    mounted () {
-      this.experiments()
+      ...mapGetters(['currentUser', 'currentExperiment', 'alert'])
     }
   }
 </script>

@@ -38,6 +38,11 @@ export default new Router({
       path: '/experimentSetup',
       name: 'experiment-setup',
       component: require('@/components/ResearcherView/ExperimentSetup').default
+    },
+    {
+      path: '/experiment',
+      name: 'experiment',
+      component: require('@/components/ResearcherView/Experiment').default
     }
   ]
 })
