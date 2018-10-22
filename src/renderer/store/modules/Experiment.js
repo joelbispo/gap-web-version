@@ -10,7 +10,7 @@ export default {
   },
   mutations: {
     setListExperiment (state, value) {
-      state.error = value
+      state.listExperiment = value
     }
   },
   getters: {

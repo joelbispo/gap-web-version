@@ -42,7 +42,7 @@
                                     Continuar
                                 </v-btn>
 
-                                <v-btn flat>Cancelar</v-btn>
+                                <v-btn flat to="homeResearcher">Cancelar</v-btn>
                             </v-stepper-content>
 
                             <v-stepper-content step="2">
@@ -98,7 +98,7 @@
 </template>
 
 <script>
-  import {mapActions} from 'vuex'
+  import {mapActions, mapGetters} from 'vuex'
   const fb = require('../../firebase-helpers/firebaseConfig')
 
   export default {
@@ -110,7 +110,8 @@
         time: 30,
         numberParticipants: 2,
         canChat: true,
-        experimentalConditions: 1
+        experimentalConditions: 1,
+        email: ''
       }
     },
     methods: {
@@ -122,15 +123,26 @@
           numberParticipants: this.numberParticipants,
           canChat: this.canChat,
           experimentalConditions: this.experimentalConditions,
-          researcher: 'joelbispo'
-        }).then(
+          researcher: this.email
+        }).then(suc => {
           this.setSuccess('Experimento salvo com sucesso')
-        ).catch(err => {
+          this.$router.push('/homeResearcher')
+          console.log(suc)
+        }).catch(err => {
           this.setError('Desculpa, algo aconteceu e não conseguimos salvar o experimento, tente novamente')
           console.log(err)
         }
         )
+      },
+      setEmail () {
+        this.email = this.currentUser.email
       }
+    },
+    computed: {
+      ...mapGetters(['currentUser'])
+    },
+    mounted () {
+      this.setEmail()
     }
   }
 </script>

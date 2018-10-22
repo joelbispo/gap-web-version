@@ -82,8 +82,8 @@
         drawer: true,
         fixed: false,
         items: [
-          {icon: 'apps', title: 'Welcome', to: '/'},
-          {icon: 'bubble_chart', title: 'Inspire', to: '/inspire'}
+          {icon: 'apps', title: 'Gerenciar Experimento', to: '/'},
+          {icon: 'bubble_chart', title: 'Históricos', to: '/inspire'}
         ],
         miniVariant: false,
         right: true,
