@@ -6,9 +6,9 @@
                     <v-card-title><div class="headline">Pesquisador</div></v-card-title>
                     <v-card-actions>
                         <div class="text-xs-center">
-                            <v-btn flat large color="primary" to="/experimentSetup">
-                                Novo Experimento
-                            </v-btn>
+                            <v-btn large color="info" to="/experimentSetup">
+                                Experimento
+                            <v-icon right dark>add_circle_outline</v-icon></v-btn>
                         </div>
                     </v-card-actions>
                     <v-card-text>
@@ -24,7 +24,7 @@
                                 <td class="text-xs-center">{{ props.item.time }}</td>
                                 <td class="text-xs-center">{{ props.item.experimentalConditions }}</td>
                                 <td class="text-xs-center">{{ props.item.canChat ? 'Sim' : 'Não' }}</td>
-                                <td class="text-xs-center"><v-btn color="primary" @click="startExperiment(props.item)">Iniciar</v-btn></td>
+                                <td class="text-xs-center"><v-btn class="white--text"  color="blue-grey" @click="startExperiment(props.item)">Iniciar</v-btn></td>
                             </template>
                             <template slot="no-data">
                                 <v-alert :value="true" color="primary" flat icon="warning">
@@ -77,6 +77,7 @@
       },
       startExperiment (experiment) {
         this.setCurrentExperiment(experiment)
+        this.$router.push('/experiment')
       }
     },
     computed: {

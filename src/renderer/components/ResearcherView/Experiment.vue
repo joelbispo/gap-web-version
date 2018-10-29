@@ -6,8 +6,8 @@
                     <v-card-title><div class="headline">Pesquisador</div></v-card-title>
                     <v-card-actions>
                         <div class="text-xs-center">
-                            <v-btn flat large color="primary" to="/experimentSetup">
-                                Novo Experimento
+                            <v-btn dark large color="info" to="/experimentSetup">
+                                Nova Sessão
                             </v-btn>
                         </div>
                     </v-card-actions>
@@ -19,10 +19,9 @@
                                 class="elevation-1"
                         >
                             <template slot="items" slot-scope="props">
-                                <td>{{ props.item.date }}</td>
-                                <td class="text-xs-center">{{ props.item.participantes.length }}</td>
-                                <td class="text-xs-center">{{ props.item.time }}</td>
-                                <td class="text-xs-center"><v-btn color="primary" @click="startExperiment(props.item.id)">Gerenciar</v-btn></td>
+                                <td>{{ Moment(props.item.date.toDate()).format('L LT') }}</td>
+                                <td class="text-xs-left">{{ props.item.participants.length }}</td>
+                                <td class="text-xs-left"><v-btn  class="white--text"  color="blue-grey" @click="startExperiment(props.item.id)">Gerenciar</v-btn></td>
                             </template>
                             <template slot="no-data">
                                 <v-alert :value="true" color="primary" flat icon="warning">
@@ -40,12 +39,14 @@
 
 <script>
   import {mapGetters} from 'vuex'
+  import moment from 'moment'
   const fb = require('../../firebase-helpers/firebaseConfig')
 
   export default {
     name: 'experiment',
     data: function () {
       return {
+        Moment: moment,
         sessionsList: [],
         headers: [
           { text: 'Data', value: 'date' },
@@ -61,6 +62,7 @@
           docs.forEach(doc => {
             fb.sessionsColletion.doc(doc.id).get().then(result => {
               const session = result.data()
+              console.log('session', session)
               session.id = doc.id
               sessions.push(session)
             })
@@ -71,6 +73,11 @@
     },
     computed: {
       ...mapGetters(['currentUser', 'currentExperiment', 'alert'])
+    },
+    mounted () {
+      this.sessions()
+      console.log('experiment list', this.sessionsList)
+      console.log('experiment', this.currentExperiment.id)
     }
   }
 </script>
