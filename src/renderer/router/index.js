@@ -6,7 +6,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/sessionSetup',
       name: 'welcome-view',
       component: require('@/components/WelcomeView').default
     },
@@ -43,6 +43,11 @@ export default new Router({
       path: '/experiment',
       name: 'experiment',
       component: require('@/components/ResearcherView/Experiment').default
+    },
+    {
+      path: '/',
+      name: 'session-setup',
+      component: require('@/components/ResearcherView/SessionSetup').default
     }
   ]
 })

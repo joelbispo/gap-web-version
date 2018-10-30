@@ -1,6 +1,10 @@
 <template>
-    <v-container fill-height>
-        <v-layout align-space-around justify-center row fill-height>
+    <v-container>
+        <v-layout>
+            <v-card>
+                <v-card-title><div class="headline">Nova Sessão</div></v-card-title>
+
+            </v-card>
         </v-layout>
     </v-container>
 </template>
