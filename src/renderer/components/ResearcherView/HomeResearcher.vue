@@ -7,7 +7,7 @@
                     <v-card-actions>
                         <div class="text-xs-center">
                             <v-btn large color="info" to="/experimentSetup">
-                                Experimento
+                                gExperimento
                             <v-icon right dark>add_circle_outline</v-icon></v-btn>
                         </div>
                     </v-card-actions>
