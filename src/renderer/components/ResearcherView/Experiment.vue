@@ -6,7 +6,7 @@
                     <v-card-title><div class="headline">Pesquisador</div></v-card-title>
                     <v-card-actions>
                         <div class="text-xs-center">
-                            <v-btn dark large color="info" to="/experimentSetup">
+                            <v-btn dark large color="info" to="/sessionSetup">
                                 Nova Sessão
                             </v-btn>
                         </div>

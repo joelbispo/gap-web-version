@@ -14,6 +14,7 @@ firebase.initializeApp(config)
 
 // firebase utils
 const db = firebase.firestore()
+const firestone = firebase.firestore
 const auth = firebase.auth()
 const currentUser = auth.currentUser
 
@@ -31,6 +32,7 @@ const sessionsColletion = db.collection('sessions')
 export {
   db,
   auth,
+  firestone,
   currentUser,
   researcherColletion,
   experimentColletion,

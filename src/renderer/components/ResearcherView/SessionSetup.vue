@@ -23,7 +23,7 @@
                                     </v-card-text>
                                     <v-card-actions>
                                         <v-spacer></v-spacer>
-                                        <v-btn color="primary" @click="addParticipat" :disabled="this.listParticipant.length>=2">Adicionar</v-btn>
+                                        <v-btn color="primary" @click="addParticipat" :disabled="this.listParticipant.length>=this.currentExperiment.numberParticipants">Adicionar</v-btn>
                                     </v-card-actions>
                                 </v-card>
                             </v-flex>
@@ -53,7 +53,7 @@
                         </v-flex>
                     </v-card-text>
                     <v-card-actions>
-                        <v-btn block color="primary">iniciar sessão</v-btn>
+                        <v-btn block color="primary" @click="startSession">iniciar sessão</v-btn>
                     </v-card-actions>
                 </v-card>
             </v-flex>
@@ -61,6 +61,8 @@
     </v-container>
 </template>
 <script>
+  import {mapActions, mapGetters} from 'vuex'
+  const fb = require('../../firebase-helpers/firebaseConfig')
   export default {
     name: 'session-setup',
     data: function () {
@@ -73,32 +75,36 @@
         name: '',
         age: '',
         userName: '',
-        listParticipant: [],
-        items: [
-          {
-            value: false,
-            userName: 'thalyson28',
-            name: 'Thalyson Ryan Santos Garcia',
-            age: 28
-          },
-          {
-            userName: 'joel11',
-            name: 'Joel Bispo dos Santos Neto',
-            age: 11
-          }
-        ]
+        listParticipant: []
       }
     },
     methods: {
+      ...mapActions(['setError', 'setSuccess']),
       addParticipat () {
         let participant = {}
         participant.name = this.name
         participant.age = this.age
-        participant.userName = this.name.split(' ')[0] + this.age
+        participant.userName = (this.name.split(' ')[0] + this.age).toLocaleLowerCase()
         this.listParticipant.push(participant)
         this.name = ''
         this.age = ''
+      },
+      startSession () {
+        fb.sessionsColletion.add({
+          experiment: this.currentExperiment.id,
+          date: fb.firestone.FieldValue.serverTimestamp(),
+          participants: this.listParticipant
+        }).then(suc => {
+          this.setSuccess('Experimento salvo com sucesso')
+          console.log(suc)
+        }).catch(err => {
+          this.setError('Desculpa, algo aconteceu e não conseguimos salvar o experimento, tente novamente')
+          console.log(err)
+        })
       }
+    },
+    computed: {
+      ...mapGetters(['currentExperiment'])
     }
   }
 </script>
