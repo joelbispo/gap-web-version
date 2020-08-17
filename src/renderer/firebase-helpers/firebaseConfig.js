@@ -3,8 +3,8 @@ import 'firebase/firestore'
 
 // firebase init goes here
 const config = {
-  apiKey: 'AIzaSyDoJWnoD_jj4RcrB_Ft7PprrUJoHfIbP80',
-  authDomain: 'gap-app-35c12.firebaseapp.com',
+  apiKey: '',
+  authDomain: '',
   databaseURL: 'https://gap-app-35c12.firebaseio.com',
   projectId: 'gap-app-35c12',
   storageBucket: 'gap-app-35c12.appspot.com',
