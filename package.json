@@ -54,7 +54,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.16.1",
+    "axios": "^0.21.1",
     "firebase": "^5.9.1",
     "firebase-functions": "^2.2.1",
     "grpc": "^1.19.0",
